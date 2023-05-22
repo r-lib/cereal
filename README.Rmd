@@ -64,7 +64,7 @@ json <- cereal_to_json(df, auto_unbox = TRUE, pretty = TRUE)
 json
 ```
 
-Storing prototype information as JSON (rather than a binary file) is more useful when it is needed as plain-text metadata, or anytime a human needs to read it. 
+Storing prototype information as JSON (rather than a binary file) means it can be used as plain-text metadata for a model. 
 
 You can also convert from JSON back to the original prototype:
 

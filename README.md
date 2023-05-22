@@ -49,9 +49,9 @@ df
 #> # A tibble: 3 × 7
 #>       a     b c          d                   e     f     g     
 #>   <dbl> <int> <date>     <dttm>              <chr> <fct> <ord> 
-#> 1   1.2     2 2023-05-22 2019-01-01 00:01:40 w     blue  small 
-#> 2   2.3     3 2023-05-23 2019-01-01 00:01:41 j     blue  large 
-#> 3   3.4     4 2023-05-24 2019-01-01 00:01:42 k     green medium
+#> 1   1.2     2 2023-05-22 2019-01-01 00:01:40 b     blue  small 
+#> 2   2.3     3 2023-05-23 2019-01-01 00:01:41 y     blue  large 
+#> 3   3.4     4 2023-05-24 2019-01-01 00:01:42 r     green medium
 ```
 
 The vctrs package has a [concept of a **vector
@@ -115,9 +115,8 @@ json
 #> }
 ```
 
-Storing prototype information as JSON (rather than a binary file) is
-more useful when it is needed as plain-text metadata, or anytime a human
-needs to read it.
+Storing prototype information as JSON (rather than a binary file) means
+it can be used as plain-text metadata for a model.
 
 You can also convert from JSON back to the original prototype:
 
