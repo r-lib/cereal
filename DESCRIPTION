@@ -1,0 +1,25 @@
+Package: cereal
+Title: Serialize 'vctrs' Objects to JSON
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Julia", "Silge", , "julia.silge@posit.co", role = c("cre", "aut"),
+           comment = c(ORCID = "0000-0002-3671-836X")),
+    person("Davis", "Vaughan", , "davis@posit.co", role = c("aut")),
+    person(given = "Posit Software, PBC", role = c("cph", "fnd"))
+  )
+Description: The 'vctrs' package provides a concept of vector prototype that
+    can be especially useful when deploying or operationalizing models and code.
+    Serialize these object prototypes to JSON so they can be used to check
+    and coerce data in production systems, and deserialize JSON back to the
+    correct object prototypes.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports: 
+    jsonlite,
+    tibble,
+    vctrs
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
