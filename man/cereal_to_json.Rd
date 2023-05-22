@@ -3,14 +3,14 @@
 \name{cereal_to_json}
 \alias{cereal_to_json}
 \alias{cereal_from_json}
-\title{Serialize and deserialize the prototype of a dataframe to JSON}
+\title{Serialize and deserialize the prototype of a data frame to JSON}
 \usage{
 cereal_to_json(data, ...)
 
 cereal_from_json(x)
 }
 \arguments{
-\item{data}{A dataframe}
+\item{data}{A data frame}
 
 \item{...}{Arguments passed on to \code{\link[jsonlite:fromJSON]{jsonlite::toJSON()}}}
 
@@ -23,7 +23,7 @@ and \code{cereal_from_json()} returns a vctrs ptype, like \code{\link[vctrs:vec_
 \description{
 The function \code{cereal_to_json()} serializes the
 \href{https://vctrs.r-lib.org/articles/type-size.html#prototype}{vctrs prototype}
-of a dataframe to JSON, and the function \code{cereal_from_json()} deserializes
+of a data frame to JSON, and the function \code{cereal_from_json()} deserializes
 from a JSON prototype back to a vctrs prototype.
 }
 \examples{

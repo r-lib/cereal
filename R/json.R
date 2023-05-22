@@ -1,11 +1,11 @@
-#' Serialize and deserialize the prototype of a dataframe to JSON
+#' Serialize and deserialize the prototype of a data frame to JSON
 #'
 #' The function `cereal_to_json()` serializes the
 #' [vctrs prototype](https://vctrs.r-lib.org/articles/type-size.html#prototype)
-#' of a dataframe to JSON, and the function `cereal_from_json()` deserializes
+#' of a data frame to JSON, and the function `cereal_from_json()` deserializes
 #' from a JSON prototype back to a vctrs prototype.
 #'
-#' @param data A dataframe
+#' @param data A data frame
 #' @param x A JSON string
 #' @param ... Arguments passed on to [jsonlite::toJSON()]
 #'

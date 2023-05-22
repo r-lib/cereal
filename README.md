@@ -8,6 +8,8 @@
 [![R-CMD-check](https://github.com/juliasilge/cereal/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/juliasilge/cereal/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/juliasilge/cereal/branch/main/graph/badge.svg)](https://app.codecov.io/gh/juliasilge/cereal?branch=main)
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
 The goal of cereal is to provide methods to
@@ -22,14 +24,15 @@ You can install the development version of cereal from
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("juliasilge/cereal")
+# install.packages("pak")
+pak::pak("juliasilge/cereal")
 ```
 
 ## Example
 
-There are many different data types that are useful in R analysis or
-models. In a dataframe or tibble, any single column has one type:
+A data frame is a rectangular collection of variables (in the columns)
+and observations (in the rows). Each variable is a vector of one data
+type, like factor or datetime:
 
 ``` r
 df <- tibble::tibble(
@@ -47,8 +50,8 @@ df
 #>       a     b c          d                   e     f     g     
 #>   <dbl> <int> <date>     <dttm>              <chr> <fct> <ord> 
 #> 1   1.2     2 2023-05-22 2019-01-01 00:01:40 w     blue  small 
-#> 2   2.3     3 2023-05-23 2019-01-01 00:01:41 z     blue  large 
-#> 3   3.4     4 2023-05-24 2019-01-01 00:01:42 u     green medium
+#> 2   2.3     3 2023-05-23 2019-01-01 00:01:41 j     blue  large 
+#> 3   3.4     4 2023-05-24 2019-01-01 00:01:42 k     green medium
 ```
 
 The vctrs package has a [concept of a **vector
