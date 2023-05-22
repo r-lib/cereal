@@ -4,6 +4,10 @@
 # cereal 🥣
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/juliasilge/cereal/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/juliasilge/cereal/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/juliasilge/cereal/branch/main/graph/badge.svg)](https://app.codecov.io/gh/juliasilge/cereal?branch=main)
 <!-- badges: end -->
 
 The goal of cereal is to provide methods to
@@ -42,9 +46,9 @@ df
 #> # A tibble: 3 × 7
 #>       a     b c          d                   e     f     g     
 #>   <dbl> <int> <date>     <dttm>              <chr> <fct> <ord> 
-#> 1   1.2     2 2023-05-22 2019-01-01 00:01:40 z     blue  small 
-#> 2   2.3     3 2023-05-23 2019-01-01 00:01:41 l     blue  large 
-#> 3   3.4     4 2023-05-24 2019-01-01 00:01:42 o     green medium
+#> 1   1.2     2 2023-05-22 2019-01-01 00:01:40 w     blue  small 
+#> 2   2.3     3 2023-05-23 2019-01-01 00:01:41 z     blue  large 
+#> 3   3.4     4 2023-05-24 2019-01-01 00:01:42 u     green medium
 ```
 
 The vctrs package has a [concept of a **vector
