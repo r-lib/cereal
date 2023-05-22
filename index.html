@@ -93,9 +93,9 @@
 <span><span class="co">#&gt; # A tibble: 3 × 7</span></span>
 <span><span class="co">#&gt;       a     b c          d                   e     f     g     </span></span>
 <span><span class="co">#&gt;   &lt;dbl&gt; &lt;int&gt; &lt;date&gt;     &lt;dttm&gt;              &lt;chr&gt; &lt;fct&gt; &lt;ord&gt; </span></span>
-<span><span class="co">#&gt; 1   1.2     2 2023-05-22 2019-01-01 00:01:40 w     blue  small </span></span>
-<span><span class="co">#&gt; 2   2.3     3 2023-05-23 2019-01-01 00:01:41 j     blue  large </span></span>
-<span><span class="co">#&gt; 3   3.4     4 2023-05-24 2019-01-01 00:01:42 k     green medium</span></span></code></pre></div>
+<span><span class="co">#&gt; 1   1.2     2 2023-05-22 2019-01-01 00:01:40 b     blue  small </span></span>
+<span><span class="co">#&gt; 2   2.3     3 2023-05-23 2019-01-01 00:01:41 y     blue  large </span></span>
+<span><span class="co">#&gt; 3   3.4     4 2023-05-24 2019-01-01 00:01:42 r     green medium</span></span></code></pre></div>
 <p>The vctrs package has a <a href="https://vctrs.r-lib.org/articles/type-size.html" class="external-link">concept of a <strong>vector prototype</strong></a> which captures the metadata associated with a vector without keeping any of the data itself.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">vctrs</span><span class="fu">::</span><span class="fu"><a href="https://vctrs.r-lib.org/reference/vec_ptype.html" class="external-link">vec_ptype</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span>
@@ -143,7 +143,7 @@
 <span><span class="co">#&gt;     }</span></span>
 <span><span class="co">#&gt;   }</span></span>
 <span><span class="co">#&gt; }</span></span></code></pre></div>
-<p>Storing prototype information as JSON (rather than a binary file) is more useful when it is needed as plain-text metadata, or anytime a human needs to read it.</p>
+<p>Storing prototype information as JSON (rather than a binary file) means it can be used as plain-text metadata for a model.</p>
 <p>You can also convert from JSON back to the original prototype:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/cereal_to_json.html">cereal_from_json</a></span><span class="op">(</span><span class="va">json</span><span class="op">)</span></span>
