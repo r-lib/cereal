@@ -47,7 +47,7 @@ as JSON.</p>
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">cereal_encode</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">new_encoding</span><span class="op">(</span><span class="va">class</span>, details <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">new_encoding</span><span class="op">(</span><span class="va">type</span>, details <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -56,12 +56,12 @@ as JSON.</p>
 <dd><p>A vector</p></dd>
 
 
-<dt>class</dt>
-<dd><p>An R class as a string, such as "factor" or "integer"</p></dd>
+<dt>type</dt>
+<dd><p>An R type or class as a string, such as  "integer" or "factor"</p></dd>
 
 
 <dt>details</dt>
-<dd><p>Optional details about the <code>class</code>, like the levels of a
+<dd><p>Optional details about the <code>type</code>, like the levels of a
 factor or timezone of a datetime</p></dd>
 
 </dl></div>
