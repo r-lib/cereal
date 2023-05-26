@@ -49,9 +49,9 @@ df
 #> # A tibble: 3 × 7
 #>       a     b c          d                   e     f     g     
 #>   <dbl> <int> <date>     <dttm>              <chr> <fct> <ord> 
-#> 1   1.2     2 2023-05-22 2019-01-01 00:01:40 b     blue  small 
-#> 2   2.3     3 2023-05-23 2019-01-01 00:01:41 y     blue  large 
-#> 3   3.4     4 2023-05-24 2019-01-01 00:01:42 r     green medium
+#> 1   1.2     2 2023-05-25 2019-01-01 00:01:40 x     blue  small 
+#> 2   2.3     3 2023-05-26 2019-01-01 00:01:41 c     blue  large 
+#> 3   3.4     4 2023-05-27 2019-01-01 00:01:42 h     green medium
 ```
 
 The vctrs package has a [concept of a **vector
@@ -79,35 +79,35 @@ json <- cereal_to_json(df, auto_unbox = TRUE, pretty = TRUE)
 json
 #> {
 #>   "a": {
-#>     "class": "double",
+#>     "type": "double",
 #>     "details": []
 #>   },
 #>   "b": {
-#>     "class": "integer",
+#>     "type": "integer",
 #>     "details": []
 #>   },
 #>   "c": {
-#>     "class": "Date",
+#>     "type": "Date",
 #>     "details": []
 #>   },
 #>   "d": {
-#>     "class": "POSIXct",
+#>     "type": "POSIXct",
 #>     "details": {
 #>       "tzone": "America/New_York"
 #>     }
 #>   },
 #>   "e": {
-#>     "class": "character",
+#>     "type": "character",
 #>     "details": []
 #>   },
 #>   "f": {
-#>     "class": "factor",
+#>     "type": "factor",
 #>     "details": {
 #>       "levels": ["blue", "green", "red"]
 #>     }
 #>   },
 #>   "g": {
-#>     "class": "ordered",
+#>     "type": "ordered",
 #>     "details": {
 #>       "levels": ["small", "medium", "large"]
 #>     }
