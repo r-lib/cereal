@@ -47,7 +47,6 @@ cereal_from_json <- function(x) {
 }
 
 as_dispatchable <- function(x) {
-    new_class <- paste0("encoded_", x$class)
-    class(x) <- new_class
+    class(x) <- paste0("encoded_", x$type)
     x
 }
