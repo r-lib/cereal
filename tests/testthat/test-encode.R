@@ -26,7 +26,7 @@ test_that("new encoding", {
     expect_equal(
         new_encoding("potato", list(levels = c("mashed", "fried", "boiled"))),
         list(
-            class = "potato",
+            type = "potato",
             details = list(levels = c("mashed", "fried", "boiled")))
     )
 })

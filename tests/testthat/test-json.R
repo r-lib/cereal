@@ -1,5 +1,5 @@
 test_that("can dispatch", {
-    x <- list(class = "potato", details = list())
+    x <- list(type = "potato", details = list())
     x <- as_dispatchable(x)
     expect_s3_class(x, "encoded_potato")
 })

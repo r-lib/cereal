@@ -7,14 +7,14 @@
 \usage{
 cereal_encode(x)
 
-new_encoding(class, details = list())
+new_encoding(type, details = list())
 }
 \arguments{
 \item{x}{A vector}
 
-\item{class}{An R class as a string, such as "factor" or "integer"}
+\item{type}{An R type or class as a string, such as  "integer" or "factor"}
 
-\item{details}{Optional details about the \code{class}, like the levels of a
+\item{details}{Optional details about the \code{type}, like the levels of a
 factor or timezone of a datetime}
 }
 \value{

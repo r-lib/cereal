@@ -5,35 +5,35 @@
     Output
       {
         "a": {
-          "class": "double",
+          "type": "double",
           "details": []
         },
         "b": {
-          "class": "integer",
+          "type": "integer",
           "details": []
         },
         "c": {
-          "class": "Date",
+          "type": "Date",
           "details": []
         },
         "d": {
-          "class": "POSIXct",
+          "type": "POSIXct",
           "details": {
             "tzone": "America/New_York"
           }
         },
         "e": {
-          "class": "character",
+          "type": "character",
           "details": []
         },
         "f": {
-          "class": "factor",
+          "type": "factor",
           "details": {
             "levels": ["blue", "green", "red"]
           }
         },
         "g": {
-          "class": "ordered",
+          "type": "ordered",
           "details": {
             "levels": ["small", "medium", "large"]
           }

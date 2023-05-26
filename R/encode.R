@@ -4,8 +4,8 @@
 #' as JSON.
 #'
 #' @param x A vector
-#' @param class An R class as a string, such as "factor" or "integer"
-#' @param details Optional details about the `class`, like the levels of a
+#' @param type An R type or class as a string, such as  "integer" or "factor"
+#' @param details Optional details about the `type`, like the levels of a
 #' factor or timezone of a datetime
 #' @return A list that can be converted to JSON with [jsonlite::toJSON()]
 #' @seealso [vctrs::vec_ptype()], [cereal_decode()]
