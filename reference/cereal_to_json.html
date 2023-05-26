@@ -99,35 +99,35 @@ and <code>cereal_from_json()</code> returns a vctrs ptype, like <code><a href="h
 <span class="r-in"><span><span class="va">json</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> {</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   "a": {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     "class": "double",</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     "type": "double",</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     "details": []</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   },</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   "b": {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     "class": "integer",</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     "type": "integer",</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     "details": []</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   },</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   "c": {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     "class": "Date",</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     "type": "Date",</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     "details": []</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   },</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   "d": {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     "class": "POSIXct",</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     "type": "POSIXct",</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     "details": {</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       "tzone": "America/New_York"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     }</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   },</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   "e": {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     "class": "character",</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     "type": "character",</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     "details": []</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   },</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   "f": {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     "class": "factor",</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     "type": "factor",</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     "details": {</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       "levels": ["blue", "green", "red"]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     }</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   },</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   "g": {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     "class": "ordered",</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     "type": "ordered",</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     "details": {</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       "levels": ["small", "medium", "large"]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     }</span>
@@ -135,7 +135,15 @@ and <code>cereal_from_json()</code> returns a vctrs ptype, like <code><a href="h
 <span class="r-out co"><span class="r-pr">#&gt;</span> } </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="fu">cereal_from_json</span><span class="op">(</span><span class="va">json</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in UseMethod("cereal_decode"):</span> no applicable method for 'cereal_decode' applied to an object of class "encoded_"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> tibble [0 × 7] (S3: tbl_df/tbl/data.frame)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ a: num(0) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ b: int(0) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ c: 'Date' num(0) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ d: 'POSIXct' num(0) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  - attr(*, "tzone")= chr "America/New_York"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ e: chr(0) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ f: Factor w/ 3 levels "blue","green",..: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ g: Ord.factor w/ 3 levels "small"&lt;"medium"&lt;..: </span>
 <span class="r-in"><span><span class="co">## same as:</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="fu">vctrs</span><span class="fu">::</span><span class="fu"><a href="https://vctrs.r-lib.org/reference/vec_ptype.html" class="external-link">vec_ptype</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> tibble [0 × 7] (S3: tbl_df/tbl/data.frame)</span>
