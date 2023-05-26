@@ -64,7 +64,7 @@ cereal_encode.ordered <- function(x) {
 
 #' @rdname cereal_encode
 #' @export
-new_encoding <- function(class, details = list()) {
-    list(class = class, details = details)
+new_encoding <- function(type, details = list()) {
+    list(type = type, details = details)
 }
 
