@@ -93,9 +93,9 @@
 <span><span class="co">#&gt; # A tibble: 3 × 7</span></span>
 <span><span class="co">#&gt;       a     b c          d                   e     f     g     </span></span>
 <span><span class="co">#&gt;   &lt;dbl&gt; &lt;int&gt; &lt;date&gt;     &lt;dttm&gt;              &lt;chr&gt; &lt;fct&gt; &lt;ord&gt; </span></span>
-<span><span class="co">#&gt; 1   1.2     2 2023-05-25 2019-01-01 00:01:40 x     blue  small </span></span>
-<span><span class="co">#&gt; 2   2.3     3 2023-05-26 2019-01-01 00:01:41 c     blue  large </span></span>
-<span><span class="co">#&gt; 3   3.4     4 2023-05-27 2019-01-01 00:01:42 h     green medium</span></span></code></pre></div>
+<span><span class="co">#&gt; 1   1.2     2 2023-05-31 2019-01-01 00:01:40 t     blue  small </span></span>
+<span><span class="co">#&gt; 2   2.3     3 2023-06-01 2019-01-01 00:01:41 p     blue  large </span></span>
+<span><span class="co">#&gt; 3   3.4     4 2023-06-02 2019-01-01 00:01:42 w     green medium</span></span></code></pre></div>
 <p>The vctrs package has a <a href="https://vctrs.r-lib.org/articles/type-size.html" class="external-link">concept of a <strong>vector prototype</strong></a> which captures the metadata associated with a vector without keeping any of the data itself.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">vctrs</span><span class="fu">::</span><span class="fu"><a href="https://vctrs.r-lib.org/reference/vec_ptype.html" class="external-link">vec_ptype</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span>
@@ -109,35 +109,42 @@
 <span><span class="va">json</span></span>
 <span><span class="co">#&gt; {</span></span>
 <span><span class="co">#&gt;   "a": {</span></span>
-<span><span class="co">#&gt;     "type": "double",</span></span>
+<span><span class="co">#&gt;     "type": "numeric",</span></span>
+<span><span class="co">#&gt;     "default": "1.2",</span></span>
 <span><span class="co">#&gt;     "details": []</span></span>
 <span><span class="co">#&gt;   },</span></span>
 <span><span class="co">#&gt;   "b": {</span></span>
 <span><span class="co">#&gt;     "type": "integer",</span></span>
+<span><span class="co">#&gt;     "default": "2",</span></span>
 <span><span class="co">#&gt;     "details": []</span></span>
 <span><span class="co">#&gt;   },</span></span>
 <span><span class="co">#&gt;   "c": {</span></span>
 <span><span class="co">#&gt;     "type": "Date",</span></span>
+<span><span class="co">#&gt;     "default": "2023-05-31",</span></span>
 <span><span class="co">#&gt;     "details": []</span></span>
 <span><span class="co">#&gt;   },</span></span>
 <span><span class="co">#&gt;   "d": {</span></span>
 <span><span class="co">#&gt;     "type": "POSIXct",</span></span>
+<span><span class="co">#&gt;     "default": "2019-01-01 00:01:40",</span></span>
 <span><span class="co">#&gt;     "details": {</span></span>
 <span><span class="co">#&gt;       "tzone": "America/New_York"</span></span>
 <span><span class="co">#&gt;     }</span></span>
 <span><span class="co">#&gt;   },</span></span>
 <span><span class="co">#&gt;   "e": {</span></span>
 <span><span class="co">#&gt;     "type": "character",</span></span>
+<span><span class="co">#&gt;     "default": "t",</span></span>
 <span><span class="co">#&gt;     "details": []</span></span>
 <span><span class="co">#&gt;   },</span></span>
 <span><span class="co">#&gt;   "f": {</span></span>
 <span><span class="co">#&gt;     "type": "factor",</span></span>
+<span><span class="co">#&gt;     "default": "blue",</span></span>
 <span><span class="co">#&gt;     "details": {</span></span>
 <span><span class="co">#&gt;       "levels": ["blue", "green", "red"]</span></span>
 <span><span class="co">#&gt;     }</span></span>
 <span><span class="co">#&gt;   },</span></span>
 <span><span class="co">#&gt;   "g": {</span></span>
 <span><span class="co">#&gt;     "type": "ordered",</span></span>
+<span><span class="co">#&gt;     "default": "small",</span></span>
 <span><span class="co">#&gt;     "details": {</span></span>
 <span><span class="co">#&gt;       "levels": ["small", "medium", "large"]</span></span>
 <span><span class="co">#&gt;     }</span></span>
