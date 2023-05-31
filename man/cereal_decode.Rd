@@ -11,7 +11,7 @@ cereal_decode(x)
 "encoded_factor"}
 }
 \value{
-A vector with zero length, such as \code{\link[=integer]{integer()}} or \code{\link[vctrs:new_factor]{vctrs::new_factor()}}
+A vector of zero length, such as \code{\link[=integer]{integer()}} or \code{\link[vctrs:new_factor]{vctrs::new_factor()}}
 }
 \description{
 Create a \code{\link[vctrs:vec_ptype]{vctrs::vec_ptype()}} from a JSON-serialized prototype created with

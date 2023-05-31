@@ -5,7 +5,7 @@
 #'
 #' @param x An object with class "encoded_*", such as "encoded_integer" or
 #' "encoded_factor"
-#' @return A vector with zero length, such as [integer()] or [vctrs::new_factor()]
+#' @return A vector of zero length, such as [integer()] or [vctrs::new_factor()]
 #' @export
 #' @examples
 #' cereal_decode(structure(list(), class = "encoded_integer"))
@@ -18,6 +18,11 @@ cereal_decode <- function(x) {
 #' @export
 cereal_decode.encoded_integer <- function(x) {
     integer()
+}
+
+#' @export
+cereal_decode.encoded_numeric <- function(x) {
+    double()
 }
 
 #' @export

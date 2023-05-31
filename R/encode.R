@@ -4,67 +4,77 @@
 #' as JSON.
 #'
 #' @param x A vector
-#' @param type An R type or class as a string, such as  "integer" or "factor"
-#' @param details Optional details about the `type`, like the levels of a
-#' factor or timezone of a datetime
+#' @details
+#' Use the `digits` option to specify how many digits after the decimal point
+#' to record in JSON, for example via [withr::local_options()].
+#'
 #' @return A list that can be converted to JSON with [jsonlite::toJSON()]
 #' @seealso [vctrs::vec_ptype()], [cereal_decode()]
 #' @export
 #'
 #' @examples
-#' new_encoding("double")
-#'
 #' cereal_encode(1:10)
 #' cereal_encode(Sys.Date())
 #' cereal_encode(sample(letters, 5))
 #' cereal_encode(factor(letters[1:5], labels = "letter"))
 #' cereal_encode(factor(LETTERS[3:1], ordered = TRUE))
 #'
-#' ## encoding a ptype returns the same result:
+#' ## you can encode a ptype as well:
 #' ptype <- vctrs::vec_ptype(factor(LETTERS[3:1], ordered = TRUE))
+#' ## but default is NULL:
 #' cereal_encode(ptype)
 #'
 cereal_encode <- function(x) {
-    UseMethod("cereal_encode")
+    list(
+        type = class(x)[[1]],
+        default = cereal_default(x),
+        details = cereal_details(x)
+    )
+}
+
+#' Find needed details for vctrs prototype
+#'
+#' @param x A vector
+#'
+#' @return A list
+#'
+#' @examples
+#' cereal_details(factor(letters[1:5], labels = "letter"))
+#' cereal_details(factor(LETTERS[3:1], ordered = TRUE))
+#' cereal_details(as.POSIXct("2023-01-01", tz = "America/New_York"))
+#' @export
+cereal_details <- function(x) {
+    UseMethod("cereal_details")
 }
 
 #' @export
-cereal_encode.integer <- function(x) {
-    new_encoding("integer")
+cereal_details.default <- function(x) {
+    list()
 }
 
 #' @export
-cereal_encode.double <- function(x) {
-    new_encoding("double")
+cereal_details.POSIXct <- function(x) {
+    list(tzone = attr(x, "tzone"))
 }
 
 #' @export
-cereal_encode.Date <- function(x) {
-    new_encoding("Date")
+cereal_details.factor <- function(x) {
+    list(levels = levels(x))
 }
 
 #' @export
-cereal_encode.POSIXct <- function(x) {
-    new_encoding("POSIXct", details = list(tzone = attr(x, "tzone")))
+cereal_details.ordered <- function(x) {
+    list(levels = levels(x))
 }
 
-#' @export
-cereal_encode.character <- function(x) {
-    new_encoding("character")
-}
-#' @export
-cereal_encode.factor <- function(x) {
-    new_encoding("factor", details = list(levels = levels(x)))
-}
-
-#' @export
-cereal_encode.ordered <- function(x) {
-    new_encoding("ordered", details = list(levels = levels(x)))
+cereal_default <- function(x) {
+    if (length(x) > 0) {
+        return(format(x[[1]], digits = getOption("digits")))
+    } else {
+        return(NULL)
+    }
 }
 
-#' @rdname cereal_encode
-#' @export
-new_encoding <- function(type, details = list()) {
-    list(type = type, details = details)
+new_cereal <- function(type, default = NULL, details = list()) {
+    list(type = type, default = default, details = details)
 }
-

@@ -2,20 +2,12 @@
 % Please edit documentation in R/encode.R
 \name{cereal_encode}
 \alias{cereal_encode}
-\alias{new_encoding}
 \title{Encode a vector as JSON}
 \usage{
 cereal_encode(x)
-
-new_encoding(type, details = list())
 }
 \arguments{
 \item{x}{A vector}
-
-\item{type}{An R type or class as a string, such as  "integer" or "factor"}
-
-\item{details}{Optional details about the \code{type}, like the levels of a
-factor or timezone of a datetime}
 }
 \value{
 A list that can be converted to JSON with \code{\link[jsonlite:fromJSON]{jsonlite::toJSON()}}
@@ -24,17 +16,20 @@ A list that can be converted to JSON with \code{\link[jsonlite:fromJSON]{jsonlit
 Create a list encoding the vctrs prototype (metadata) that can be stored
 as JSON.
 }
+\details{
+Use the \code{digits} option to specify how many digits after the decimal point
+to record in JSON, for example via \code{\link[withr:with_options]{withr::local_options()}}.
+}
 \examples{
-new_encoding("double")
-
 cereal_encode(1:10)
 cereal_encode(Sys.Date())
 cereal_encode(sample(letters, 5))
 cereal_encode(factor(letters[1:5], labels = "letter"))
 cereal_encode(factor(LETTERS[3:1], ordered = TRUE))
 
-## encoding a ptype returns the same result:
+## you can encode a ptype as well:
 ptype <- vctrs::vec_ptype(factor(LETTERS[3:1], ordered = TRUE))
+## but default is NULL:
 cereal_encode(ptype)
 
 }
