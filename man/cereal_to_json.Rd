@@ -47,5 +47,5 @@ str(vctrs::vec_ptype(df))
 
 }
 \seealso{
-\code{\link[=cereal_encode]{cereal_encode()}}, \link{cereal_decode}
+\code{\link[=cereal_encode]{cereal_encode()}}, \code{\link[=cereal_decode]{cereal_decode()}}
 }

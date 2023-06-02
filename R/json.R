@@ -12,7 +12,7 @@
 #' @return `cereal_to_json()` returns a JSON string like [jsonlite::toJSON()],
 #' and `cereal_from_json()` returns a vctrs ptype, like [vctrs::vec_ptype()].
 #' @export
-#' @seealso [cereal_encode()], [cereal_decode]
+#' @seealso [cereal_encode()], [cereal_decode()]
 #' @examples
 #'
 #' df <- tibble::tibble(
