@@ -5,9 +5,9 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/juliasilge/cereal/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/juliasilge/cereal/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/r-lib/cereal/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/r-lib/cereal/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/juliasilge/cereal/branch/main/graph/badge.svg)](https://app.codecov.io/gh/juliasilge/cereal?branch=main)
+coverage](https://codecov.io/gh/r-lib/cereal/branch/main/graph/badge.svg)](https://app.codecov.io/gh/r-lib/cereal?branch=main)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
@@ -25,7 +25,7 @@ You can install the development version of cereal from
 
 ``` r
 # install.packages("pak")
-pak::pak("juliasilge/cereal")
+pak::pak("r-lib/cereal")
 ```
 
 ## Example
@@ -49,9 +49,9 @@ df
 #> # A tibble: 3 × 7
 #>       a     b c          d                   e     f     g     
 #>   <dbl> <int> <date>     <dttm>              <chr> <fct> <ord> 
-#> 1   1.2     2 2023-05-31 2019-01-01 00:01:40 t     blue  small 
-#> 2   2.3     3 2023-06-01 2019-01-01 00:01:41 p     blue  large 
-#> 3   3.4     4 2023-06-02 2019-01-01 00:01:42 w     green medium
+#> 1   1.2     2 2023-06-02 2019-01-01 00:01:40 l     blue  small 
+#> 2   2.3     3 2023-06-03 2019-01-01 00:01:41 t     blue  large 
+#> 3   3.4     4 2023-06-04 2019-01-01 00:01:42 w     green medium
 ```
 
 The vctrs package has a [concept of a **vector
@@ -90,7 +90,7 @@ json
 #>   },
 #>   "c": {
 #>     "type": "Date",
-#>     "default": "2023-05-31",
+#>     "default": "2023-06-02",
 #>     "details": []
 #>   },
 #>   "d": {
@@ -102,7 +102,7 @@ json
 #>   },
 #>   "e": {
 #>     "type": "character",
-#>     "default": "t",
+#>     "default": "l",
 #>     "details": []
 #>   },
 #>   "f": {
@@ -144,7 +144,7 @@ For an approach to this same task using Python, [see Pydantic’s
   By contributing to this project, you agree to abide by its terms.
 
 - If you think you have encountered a bug, please [submit an
-  issue](https://github.com/juliasilge/cereal/issues).
+  issue](https://github.com/r-lib/cereal/issues).
 
 - Either way, learn how to create and share a
   [reprex](https://reprex.tidyverse.org/articles/articles/learn-reprex.html)

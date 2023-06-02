@@ -16,8 +16,8 @@ knitr::opts_chunk$set(
 # cereal 🥣
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/juliasilge/cereal/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/juliasilge/cereal/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/juliasilge/cereal/branch/main/graph/badge.svg)](https://app.codecov.io/gh/juliasilge/cereal?branch=main)
+[![R-CMD-check](https://github.com/r-lib/cereal/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/r-lib/cereal/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/r-lib/cereal/branch/main/graph/badge.svg)](https://app.codecov.io/gh/r-lib/cereal?branch=main)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
@@ -29,7 +29,7 @@ You can install the development version of cereal from [GitHub](https://github.c
 
 ``` r
 # install.packages("pak")
-pak::pak("juliasilge/cereal")
+pak::pak("r-lib/cereal")
 ```
 
 ## Example
@@ -78,7 +78,7 @@ For an approach to this same task using Python, [see Pydantic's `model.json()`](
 
 - This project is released with a [Contributor Code of Conduct](https://www.contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
 
-- If you think you have encountered a bug, please [submit an issue](https://github.com/juliasilge/cereal/issues).
+- If you think you have encountered a bug, please [submit an issue](https://github.com/r-lib/cereal/issues).
 
 - Either way, learn how to create and share a [reprex](https://reprex.tidyverse.org/articles/articles/learn-reprex.html) (a minimal, reproducible example), to clearly communicate about your code.
 
