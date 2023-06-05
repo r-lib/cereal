@@ -1,7 +1,7 @@
 test_that("can dispatch", {
-    x <- list(type = "potato", details = list())
+    x <- list(type = "froot_loops", details = list())
     x <- as_dispatchable(x)
-    expect_s3_class(x, "encoded_potato")
+    expect_s3_class(x, "cereal_froot_loops")
 })
 
 test_that("can roundtrip ptype through JSON", {

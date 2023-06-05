@@ -7,8 +7,8 @@
 cereal_decode(x)
 }
 \arguments{
-\item{x}{An object with class "encoded_*", such as "encoded_integer" or
-"encoded_factor"}
+\item{x}{An object with class "cereal_*", such as "cereal_integer" or
+"cereal_factor"}
 }
 \value{
 A vector of zero length, such as \code{\link[=integer]{integer()}} or \code{\link[vctrs:new_factor]{vctrs::new_factor()}}
@@ -18,7 +18,7 @@ Create a \code{\link[vctrs:vec_ptype]{vctrs::vec_ptype()}} from a JSON-serialize
 \code{\link[=cereal_encode]{cereal_encode()}}.
 }
 \examples{
-cereal_decode(structure(list(), class = "encoded_integer"))
-cereal_decode(structure(list(), class = "encoded_Date"))
+cereal_decode(structure(list(), class = "cereal_integer"))
+cereal_decode(structure(list(), class = "cereal_Date"))
 
 }
