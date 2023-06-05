@@ -17,7 +17,7 @@ test_that("can roundtrip ptype through JSON", {
 
     expect_snapshot(cereal_to_json(df$a), error = TRUE)
 
-    json <- cereal_to_json(df, auto_unbox = TRUE, pretty = TRUE)
+    json <- cereal_to_json(df)
     expect_snapshot(json)
     expect_equal(cereal_from_json(json), vctrs::vec_ptype(df))
 })

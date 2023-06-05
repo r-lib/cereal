@@ -5,14 +5,12 @@
 \alias{cereal_from_json}
 \title{Serialize and deserialize the prototype of a data frame to JSON}
 \usage{
-cereal_to_json(data, ...)
+cereal_to_json(data)
 
 cereal_from_json(x)
 }
 \arguments{
 \item{data}{A data frame}
-
-\item{...}{Arguments passed on to \code{\link[jsonlite:fromJSON]{jsonlite::toJSON()}}}
 
 \item{x}{A JSON string}
 }
@@ -38,7 +36,7 @@ df <- tibble::tibble(
     g = ordered("small", levels = c("small", "medium", "large"))
 )
 
-json <- cereal_to_json(df, auto_unbox = TRUE, pretty = TRUE)
+json <- cereal_to_json(df)
 json
 
 str(cereal_from_json(json))

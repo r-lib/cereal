@@ -7,7 +7,6 @@
 #'
 #' @param data A data frame
 #' @param x A JSON string
-#' @param ... Arguments passed on to [jsonlite::toJSON()]
 #'
 #' @return `cereal_to_json()` returns a JSON string like [jsonlite::toJSON()],
 #' and `cereal_from_json()` returns a vctrs ptype, like [vctrs::vec_ptype()].
@@ -25,17 +24,17 @@
 #'     g = ordered("small", levels = c("small", "medium", "large"))
 #' )
 #'
-#' json <- cereal_to_json(df, auto_unbox = TRUE, pretty = TRUE)
+#' json <- cereal_to_json(df)
 #' json
 #'
 #' str(cereal_from_json(json))
 #' ## same as:
 #' str(vctrs::vec_ptype(df))
 #'
-cereal_to_json <- function(data, ...) {
+cereal_to_json <- function(data) {
     check_data_frame(data)
     data <- lapply(data, cereal_encode)
-    jsonlite::toJSON(data, ...)
+    jsonlite::toJSON(data, auto_unbox = TRUE, pretty = TRUE)
 }
 
 #' @rdname cereal_to_json

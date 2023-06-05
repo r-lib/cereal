@@ -49,9 +49,9 @@ df
 #> # A tibble: 3 × 7
 #>       a     b c          d                   e     f     g     
 #>   <dbl> <int> <date>     <dttm>              <chr> <fct> <ord> 
-#> 1   1.2     2 2023-06-02 2019-01-01 00:01:40 l     blue  small 
-#> 2   2.3     3 2023-06-03 2019-01-01 00:01:41 t     blue  large 
-#> 3   3.4     4 2023-06-04 2019-01-01 00:01:42 w     green medium
+#> 1   1.2     2 2023-06-05 2019-01-01 00:01:40 s     blue  small 
+#> 2   2.3     3 2023-06-06 2019-01-01 00:01:41 n     blue  large 
+#> 3   3.4     4 2023-06-07 2019-01-01 00:01:42 i     green medium
 ```
 
 The vctrs package has a [concept of a **vector
@@ -75,7 +75,7 @@ cereal, you can store this vector prototype in plain text as JSON:
 
 ``` r
 library(cereal)
-json <- cereal_to_json(df, auto_unbox = TRUE, pretty = TRUE)
+json <- cereal_to_json(df)
 json
 #> {
 #>   "a": {
@@ -90,7 +90,7 @@ json
 #>   },
 #>   "c": {
 #>     "type": "Date",
-#>     "default": "2023-06-02",
+#>     "default": "2023-06-05",
 #>     "details": []
 #>   },
 #>   "d": {
@@ -102,7 +102,7 @@ json
 #>   },
 #>   "e": {
 #>     "type": "character",
-#>     "default": "l",
+#>     "default": "s",
 #>     "details": []
 #>   },
 #>   "f": {

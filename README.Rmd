@@ -60,7 +60,7 @@ The information stored in such a vector prototype includes, for example, the lev
 
 ```{r}
 library(cereal)
-json <- cereal_to_json(df, auto_unbox = TRUE, pretty = TRUE)
+json <- cereal_to_json(df)
 json
 ```
 
