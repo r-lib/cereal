@@ -13,6 +13,10 @@ Description: The 'vctrs' package provides a concept of vector prototype
     can be used to check and coerce data in production systems, and
     deserialize JSON back to the correct object prototypes.
 License: MIT + file LICENSE
+URL: https://r-lib.github.io/cereal/, https://github.com/r-lib/cereal/
+BugReports: https://github.com/r-lib/cereal/issues
+Depends: 
+    R (>= 3.5)
 Imports: 
     jsonlite,
     rlang,
