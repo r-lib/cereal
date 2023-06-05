@@ -15,6 +15,7 @@ Description: The 'vctrs' package provides a concept of vector prototype
 License: MIT + file LICENSE
 Imports: 
     jsonlite,
+    rlang,
     tibble,
     vctrs
 Suggests: 

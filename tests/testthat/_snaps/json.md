@@ -1,6 +1,13 @@
 # can roundtrip ptype through JSON
 
     Code
+      cereal_to_json(df$a)
+    Error <rlang_error>
+      `data` must be a data frame, not the number 1.
+
+---
+
+    Code
       json
     Output
       {

@@ -33,6 +33,7 @@
 #' str(vctrs::vec_ptype(df))
 #'
 cereal_to_json <- function(data, ...) {
+    check_data_frame(data)
     data <- lapply(data, cereal_encode)
     jsonlite::toJSON(data, ...)
 }
