@@ -25,7 +25,7 @@
 #' cereal_encode(ptype)
 #'
 cereal_encode <- function(x) {
-    list(
+    new_cereal(
         type = class(x)[[1]],
         default = cereal_default(x),
         details = cereal_details(x)
