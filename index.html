@@ -53,7 +53,14 @@
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="search.json" id="search-input" placeholder="Search for" autocomplete="off">
 </form>
 
-      <ul class="navbar-nav"></ul>
+      <ul class="navbar-nav">
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/r-lib/cereal/" aria-label="github">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
 
     
@@ -104,7 +111,7 @@
 <span><span class="co">#&gt; #   g &lt;ord&gt;</span></span></code></pre></div>
 <p>The information stored in such a vector prototype includes, for example, the levels of a factor and the timezone for a datetime. This can be useful or important information when deploying code or models, such as when using <a href="https://vetiver.rstudio.com/" class="external-link">vetiver</a>. We could store this vector prototype as an R binary object saved as an <code>.rds</code> file, but with cereal, you can store this vector prototype in plain text as JSON:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">cereal</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-lib.github.io/cereal/" class="external-link">cereal</a></span><span class="op">)</span></span>
 <span><span class="va">json</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/cereal_to_json.html">cereal_to_json</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span>
 <span><span class="va">json</span></span>
 <span><span class="co">#&gt; {</span></span>
@@ -169,7 +176,15 @@
 </ul>
 </div>
 </div>
-  </main><aside class="col-md-3"><div class="license">
+  </main><aside class="col-md-3"><div class="links">
+<h2 data-toc-skip>Links</h2>
+<ul class="list-unstyled">
+<li><a href="https://github.com/r-lib/cereal/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/r-lib/cereal/issues" class="external-link">Report a bug</a></li>
+</ul>
+</div>
+
+<div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
