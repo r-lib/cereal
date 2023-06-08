@@ -29,7 +29,7 @@ cereal_encode(factor(LETTERS[3:1], ordered = TRUE))
 
 ## you can encode a ptype as well:
 ptype <- vctrs::vec_ptype(factor(LETTERS[3:1], ordered = TRUE))
-## but default is NULL:
+## but "example" is NULL:
 cereal_encode(ptype)
 
 }

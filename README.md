@@ -49,9 +49,9 @@ df
 #> # A tibble: 3 × 7
 #>       a     b c          d                   e     f     g     
 #>   <dbl> <int> <date>     <dttm>              <chr> <fct> <ord> 
-#> 1   1.2     2 2023-06-05 2019-01-01 00:01:40 s     blue  small 
-#> 2   2.3     3 2023-06-06 2019-01-01 00:01:41 n     blue  large 
-#> 3   3.4     4 2023-06-07 2019-01-01 00:01:42 i     green medium
+#> 1   1.2     2 2023-06-08 2019-01-01 00:01:40 m     blue  small 
+#> 2   2.3     3 2023-06-09 2019-01-01 00:01:41 p     blue  large 
+#> 3   3.4     4 2023-06-10 2019-01-01 00:01:42 g     green medium
 ```
 
 The vctrs package has a [concept of a **vector
@@ -80,41 +80,41 @@ json
 #> {
 #>   "a": {
 #>     "type": "numeric",
-#>     "default": "1.2",
+#>     "example": "1.2",
 #>     "details": []
 #>   },
 #>   "b": {
 #>     "type": "integer",
-#>     "default": "2",
+#>     "example": "2",
 #>     "details": []
 #>   },
 #>   "c": {
 #>     "type": "Date",
-#>     "default": "2023-06-05",
+#>     "example": "2023-06-08",
 #>     "details": []
 #>   },
 #>   "d": {
 #>     "type": "POSIXct",
-#>     "default": "2019-01-01 00:01:40",
+#>     "example": "2019-01-01 00:01:40",
 #>     "details": {
 #>       "tzone": "America/New_York"
 #>     }
 #>   },
 #>   "e": {
 #>     "type": "character",
-#>     "default": "s",
+#>     "example": "m",
 #>     "details": []
 #>   },
 #>   "f": {
 #>     "type": "factor",
-#>     "default": "blue",
+#>     "example": "blue",
 #>     "details": {
 #>       "levels": ["blue", "green", "red"]
 #>     }
 #>   },
 #>   "g": {
 #>     "type": "ordered",
-#>     "default": "small",
+#>     "example": "small",
 #>     "details": {
 #>       "levels": ["small", "medium", "large"]
 #>     }

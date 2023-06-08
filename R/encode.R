@@ -21,13 +21,13 @@
 #'
 #' ## you can encode a ptype as well:
 #' ptype <- vctrs::vec_ptype(factor(LETTERS[3:1], ordered = TRUE))
-#' ## but default is NULL:
+#' ## but "example" is NULL:
 #' cereal_encode(ptype)
 #'
 cereal_encode <- function(x) {
     new_cereal(
         type = class(x)[[1]],
-        default = cereal_default(x),
+        example = cereal_example(x),
         details = cereal_details(x)
     )
 }
@@ -67,7 +67,7 @@ cereal_details.ordered <- function(x) {
     list(levels = levels(x))
 }
 
-cereal_default <- function(x) {
+cereal_example <- function(x) {
     if (length(x) > 0) {
         return(format(x[[1]], digits = getOption("digits")))
     } else {
@@ -75,6 +75,6 @@ cereal_default <- function(x) {
     }
 }
 
-new_cereal <- function(type, default = NULL, details = list()) {
-    list(type = type, default = default, details = details)
+new_cereal <- function(type, example = NULL, details = list()) {
+    list(type = type, example = example, details = details)
 }

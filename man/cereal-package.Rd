@@ -8,6 +8,15 @@
 \description{
 The 'vctrs' package provides a concept of vector prototype that can be especially useful when deploying or operationalizing models and code. Serialize these object prototypes to JSON so they can be used to check and coerce data in production systems, and deserialize JSON back to the correct object prototypes.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://r-lib.github.io/cereal/}
+  \item \url{https://github.com/r-lib/cereal/}
+  \item Report bugs at \url{https://github.com/r-lib/cereal/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Julia Silge \email{julia.silge@posit.co} (\href{https://orcid.org/0000-0002-3671-836X}{ORCID})
 

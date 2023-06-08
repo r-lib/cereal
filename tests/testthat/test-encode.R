@@ -24,7 +24,7 @@ test_that("can encode data types", {
     x <- factor("blue", levels = c("blue", "green", "red"))
     expect_equal(
         names(cereal_encode(x)),
-        c("type", "default", "details")
+        c("type", "example", "details")
     )
     expect_equal(
         cereal_encode(x),

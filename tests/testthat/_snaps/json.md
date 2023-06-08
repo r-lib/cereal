@@ -13,41 +13,41 @@
       {
         "a": {
           "type": "numeric",
-          "default": "1",
+          "example": "1",
           "details": []
         },
         "b": {
           "type": "integer",
-          "default": "2",
+          "example": "2",
           "details": []
         },
         "c": {
           "type": "Date",
-          "default": "2023-01-01",
+          "example": "2023-01-01",
           "details": []
         },
         "d": {
           "type": "POSIXct",
-          "default": "2019-01-01",
+          "example": "2019-01-01",
           "details": {
             "tzone": "America/New_York"
           }
         },
         "e": {
           "type": "character",
-          "default": "x",
+          "example": "x",
           "details": []
         },
         "f": {
           "type": "factor",
-          "default": "blue",
+          "example": "blue",
           "details": {
             "levels": ["blue", "green", "red"]
           }
         },
         "g": {
           "type": "ordered",
-          "default": "small",
+          "example": "small",
           "details": {
             "levels": ["small", "medium", "large"]
           }
