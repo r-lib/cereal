@@ -25,6 +25,13 @@ The goal of cereal is to provide methods to [serialize](https://en.wikipedia.org
 
 ## Installation
 
+You can install the released version of vetiver from
+[CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("cereal")
+```
+
 You can install the development version of cereal from [GitHub](https://github.com/) with:
 
 ``` r
