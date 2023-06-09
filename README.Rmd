@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/r-lib/cereal/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/r-lib/cereal/actions/workflows/R-CMD-check.yaml)
+[![CRAN status](https://www.r-pkg.org/badges/version/cereal)](https://CRAN.R-project.org/package=cereal)
 [![Codecov test coverage](https://codecov.io/gh/r-lib/cereal/branch/main/graph/badge.svg)](https://app.codecov.io/gh/r-lib/cereal?branch=main)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->

@@ -6,6 +6,8 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/r-lib/cereal/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/r-lib/cereal/actions/workflows/R-CMD-check.yaml)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/cereal)](https://CRAN.R-project.org/package=cereal)
 [![Codecov test
 coverage](https://codecov.io/gh/r-lib/cereal/branch/main/graph/badge.svg)](https://app.codecov.io/gh/r-lib/cereal?branch=main)
 [![Lifecycle:
@@ -56,9 +58,9 @@ df
 #> # A tibble: 3 × 7
 #>       a     b c          d                   e     f     g     
 #>   <dbl> <int> <date>     <dttm>              <chr> <fct> <ord> 
-#> 1   1.2     2 2023-06-08 2019-01-01 00:01:40 z     blue  small 
-#> 2   2.3     3 2023-06-09 2019-01-01 00:01:41 c     blue  large 
-#> 3   3.4     4 2023-06-10 2019-01-01 00:01:42 t     green medium
+#> 1   1.2     2 2023-06-09 2019-01-01 00:01:40 b     blue  small 
+#> 2   2.3     3 2023-06-10 2019-01-01 00:01:41 p     blue  large 
+#> 3   3.4     4 2023-06-11 2019-01-01 00:01:42 k     green medium
 ```
 
 The vctrs package has a [concept of a **vector
@@ -97,7 +99,7 @@ json
 #>   },
 #>   "c": {
 #>     "type": "Date",
-#>     "example": "2023-06-08",
+#>     "example": "2023-06-09",
 #>     "details": []
 #>   },
 #>   "d": {
@@ -109,7 +111,7 @@ json
 #>   },
 #>   "e": {
 #>     "type": "character",
-#>     "example": "z",
+#>     "example": "b",
 #>     "details": []
 #>   },
 #>   "f": {
