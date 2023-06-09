@@ -2,3 +2,6 @@ url: ~
 template:
   bootstrap: 5
   package: tidytemplate
+
+development:
+  mode: auto
