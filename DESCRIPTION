@@ -1,6 +1,6 @@
 Package: cereal
 Title: Serialize 'vctrs' Objects to 'JSON'
-Version: 0.1.0
+Version: 0.1.0.9000
 Authors@R: c(
     person("Julia", "Silge", , "julia.silge@posit.co", role = c("cre", "aut"),
            comment = c(ORCID = "0000-0002-3671-836X")),
