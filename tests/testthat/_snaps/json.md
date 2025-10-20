@@ -2,8 +2,9 @@
 
     Code
       cereal_to_json(df$a)
-    Error <rlang_error>
-      `data` must be a data frame, not the number 1.
+    Condition
+      Error in `cereal_to_json()`:
+      ! `data` must be a data frame, not the number 1.
 
 ---
 

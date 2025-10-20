@@ -6,7 +6,7 @@
 \alias{cereal-package}
 \title{cereal: Serialize 'vctrs' Objects to 'JSON'}
 \description{
-The 'vctrs' package provides a concept of vector prototype that can be especially useful when deploying models and code. Serialize these object prototypes to 'JSON' so they can be used to check and coerce data in production systems, and de-serialize 'JSON' back to the correct object prototypes.
+The 'vctrs' package provides a concept of vector prototype that can be especially useful when deploying models and code. Serialize these object prototypes to 'JSON' so they can be used to check and coerce data in production systems, and deserialize 'JSON' back to the correct object prototypes.
 }
 \seealso{
 Useful links:
